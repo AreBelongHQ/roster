@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.arebelong.com/roster.schema.json",
+  "title": "AreBelong roster publication index",
+  "description": "Edit roster.json to propose hero packages. Array order is roster and inspector order. Cross-field uniqueness and featured references are checked by npm run validate:roster.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "heroes", "featured"],
+  "properties": {
+    "$schema": {"const": "./roster.schema.json"},
+    "schemaVersion": {"const": 1},
+    "heroes": {
+      "type": "array", "minItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "cid"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$", "description": "Stable public URL identifier; preserve it for package updates."},
+          "cid": {"type": "string", "pattern": "^bafybei[a-z2-7]{51}[aeimquy4]$", "description": "Bare lowercase base32 CIDv1, dag-pb, sha2-256. Directory must contain manifest.json. No gateway URL or file path."}
+        }
+      }
+    },
+    "featured": {
+      "type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$"},
+      "description": "Three existing hero IDs, in stage order. Select published packages with models and idle animations."
+    }
+  }
+}

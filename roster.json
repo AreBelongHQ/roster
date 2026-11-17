@@ -1,0 +1,43 @@
+{
+  "$schema": "./roster.schema.json",
+  "schemaVersion": 1,
+  "heroes": [
+    {
+      "id": "septima",
+      "cid": "bafybeihxtr2v42d7yqcbgara5h3usqhzzjti47oasdsnujsab2mvfawn5u"
+    },
+    {
+      "id": "hesper",
+      "cid": "bafybeifoca7fryqzw4hby4hvoegpqwcrjxku7h64sjrwyyi22wcg3w5dtq"
+    },
+    {
+      "id": "barrow",
+      "cid": "bafybeia46rlhazyt2ck62zkpqpau24pmfkzdl5bxggmlgradrmbxauswqu"
+    },
+    {
+      "id": "veyra",
+      "cid": "bafybeihs57emmntrae67t4so534uayiakf7zm5hshw5mi6y2otp3hv3r3i"
+    },
+    {
+      "id": "orren",
+      "cid": "bafybeidzoxwpw3a6vwgw4hq77ai5sdjykjsnqa72gj4oh4yvxmgxs4xevu"
+    },
+    {
+      "id": "thessane",
+      "cid": "bafybeickqb2ywhqe36at7etuwsc5jofrkovvw4cyvweq53qcovjr7m5flm"
+    },
+    {
+      "id": "wenna",
+      "cid": "bafybeifsv7q6zruwfhuls42s2n7padwf6relxkwo2osthwq6o2jyf6lvhi"
+    },
+    {
+      "id": "gatekeeper",
+      "cid": "bafybeiblggkbuiqvr362ynso5etdsybaqwxrilgqlxfvxstzd3lmfdvquu"
+    }
+  ],
+  "featured": [
+    "septima",
+    "barrow",
+    "hesper"
+  ]
+}
