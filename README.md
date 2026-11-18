@@ -17,8 +17,10 @@ propose new characters and improvements to existing ones.
 Read **[the contribution guide](CONTRIBUTING.md)** for the full process and
 **[the package reference](PACKAGE.md)** for the content the website understands.
 
-`heroes` order controls the gallery and inspector. `featured` selects the three
-homepage characters. Character assets and metadata live in IPFS, not this repo.
+`heroes` order controls the gallery and inspector. `featured` selects three
+curated homepage heroes. The most recently appended hero appears first as
+**Latest arrival**. Each appears once, for up to four stages. Append new hero IDs
+and update revised CIDs in place. Character assets and metadata live in IPFS.
 The schema is [roster.schema.json](roster.schema.json).
 
 ## Validate locally

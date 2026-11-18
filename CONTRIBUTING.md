@@ -41,10 +41,11 @@ do not paste a gateway URL, `ipfs://` prefix, file path, mutable IPNS name or CI
 Each hero must reference a different package. Array order controls roster and
 inspector navigation order. Preserve unrelated entries when proposing changes.
 
-The `featured` array selects exactly three existing hero IDs for the homepage,
-in stage order. Change it only when proposing a lineup change, and verify those
-packages have a viewable model and idle animation. A new roster entry does not
-need to be featured. Missing homepage illustrations display **Missing**.
+The `featured` array selects three curated homepage heroes in stage order.
+The most recently appended hero appears first as **Latest arrival**. Each hero
+appears once, for up to four stages. Append new IDs and update revised CIDs
+in place. Check the published model and its idle animation for the latest
+arrival and all three featured entries.
 
 Changing an IPFS file produces a new package CID. Pin the new directory and
 replace the old CID in this JSON; do not rename an existing hero for a revision.
