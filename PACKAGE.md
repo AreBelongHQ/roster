@@ -28,6 +28,26 @@ Voice recordings must be declared as present files under
 Model and concept files should be suitable for browser download and inspection.
 Homepage features need a declared `lod1` or `lod0` model and an embedded `idle` clip.
 
+### Engine downloads
+
+To add a package to a character’s **Assets → Engine downloads** table, include
+the archive and a recording of its animation controller in the character’s IPFS
+directory. Replace `{id}` with the roster ID. Add each file to the matching
+manifest section with `kind: "file"`, `required: false`, its byte size and
+SHA-256. Put the tested editor version in the archive’s `note`.
+
+| Engine | Archive in the `model` section | Controller video in the `art` section |
+| --- | --- | --- |
+| Unity | `engine.unity` → `model/engines/{id}-unity.unitypackage` | `engine_demo.unity` → `art/engines/{id}-unity.mp4` |
+| Unreal Engine | `engine.unreal` → `model/engines/{id}-unreal.zip` | `engine_demo.unreal` → `art/engines/{id}-unreal.mp4` |
+| Godot | `engine.godot` → `model/engines/{id}-godot.zip` | `engine_demo.godot` → `art/engines/{id}-godot.mp4` |
+
+Test the archive in a clean project and play its demo scene. Include the rig,
+controller, clips, materials, import instructions and attribution inside the
+download. Record the supplied controller playing the character in that engine
+and export the preview as an H.264 MP4. An absent archive or recording displays
+as **Missing**. Pin the revised directory and put its new CID in your roster PR.
+
 Optional hero fields include `id`, `name`, `role`, `premise`, `home`, `people`,
 `faction`, `attack_type`, `complexity`, `accent` and `status`. Do not imply a
 production milestone or finished asset when the package is incomplete.
